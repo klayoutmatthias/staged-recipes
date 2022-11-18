@@ -1,0 +1,12 @@
+diff --git a/build.sh b/build.sh
+index bead5915a..1dc8e6c4d 100755
+--- a/build.sh
++++ b/build.sh
+@@ -693,6 +693,7 @@ if [ $BUILD_EXPERT = 1 ]; then
+     QMAKE_CXXFLAGS="$CXXFLAGS"
+     QMAKE_CXXFLAGS_RELEASE=
+     QMAKE_CXXFLAGS_DEBUG=
++    QMAKE_LIBS="$LIBS"
+     QMAKE_LFLAGS="$LDFLAGS"
+     QMAKE_LFLAGS_RELEASE=
+     QMAKE_LFLAGS_DEBUG=

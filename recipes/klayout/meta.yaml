@@ -13,6 +13,8 @@ package:
   version: {{ version }}
 
 source:
+  patches:
+    build.patch
   #url: https://github.com/KLayout/klayout/releases/download/{{ version }}/klayout-{{ version }}.tar.gz
   url: https://github.com/KLayout/klayout/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 6ef5e6ae5ea387618663949a1efa105406aeb36db2d18d89eff0345955aae979
@@ -39,7 +41,15 @@ requirements:
     # Compilers are named 'c', 'cxx' and 'fortran'.
     - {{ compiler('cxx') }}
     - make
+    # Linux
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxext') }}     # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxau') }}  # [linux]
 
   host:
     # All Platforms

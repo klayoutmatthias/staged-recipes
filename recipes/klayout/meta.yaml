@@ -65,6 +65,11 @@ requirements:
     - curl # [win]
     - pthreads-win32 # [win]
 
+  run:
+    - python>3.6
+    - ruby>2
+    - Qt>=5
+
 test:
   # For python packages, it is useful to run pip check. However, sometimes the
   # metadata used by pip is out of date. Thus this section is optional if it is
